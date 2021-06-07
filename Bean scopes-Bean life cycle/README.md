@@ -49,15 +49,15 @@ public class TestForReportApplication {
 Scope của một bean định nghĩa life cycle và tính visibility của bean đó tỏng context
 
 Có 5 scope trong bean
-* Singleton: Chỉ duy nhất một thể hiện của bean sẽ được tạo cho mỗi container. Đây là scope mặc định cho spring bean. Khi sử dụng scope này cần chắc chắn rằng các bean không có các biến/thuộc tính được share. Khi được đánh dấu @Autowired thì sẽ gọi lại object trong ApplicationContext  
+* **Singleton**: Chỉ duy nhất một thể hiện của bean sẽ được tạo cho mỗi container. Đây là scope mặc định cho spring bean. Khi sử dụng scope này cần chắc chắn rằng các bean không có các biến/thuộc tính được share. Khi được đánh dấu @Autowired thì sẽ gọi lại object trong ApplicationContext  
 
-* Prototype: Một thể hiện của bean sẽ được tạo cho mỗi lần được yêu cầu(request) 
+* **Prototype**: Một thể hiện của bean sẽ được tạo cho mỗi lần được yêu cầu(request) 
 
-* Request: giống với prototype scope, tuy nhiên nó dùng cho ứng dụng web, một thể hiện của bean sẽ được tạo cho mỗi HTTP request. 
+* **Request**: giống với prototype scope, tuy nhiên nó dùng cho ứng dụng web, một thể hiện của bean sẽ được tạo cho mỗi HTTP request. 
 
-* Session: Mỗi thể hiện của bean sẽ được tạo cho mỗi HTTP Session 
+* **Session**: Mỗi thể hiện của bean sẽ được tạo cho mỗi HTTP Session 
 
-* Global-Session: Được sử dụng để tạo global session bean cho các ứng dụng Portlet. 
+* **Global-Session**: Được sử dụng để tạo global session bean cho các ứng dụng Portlet. 
   
 ```
 public class Student {
