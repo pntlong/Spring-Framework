@@ -7,7 +7,7 @@
 
 [4. Bean Scopes, Bean life cycle](/Bean%20scopes-Bean%20life%20cycle/README.md)
 
-[5. Entity, ORRM Relationship, Fetch Type(Lazy vs Eager)](Entity-ORM-Rlationship-Fetch-Type-(Lazy-vs-Eager)/README.md)
+[5. Entity, ORM Relationship, Fetch Type(Lazy vs Eager)](Entity-ORM-Rlationship-Fetch-Type-(Lazy-vs-Eager)/README.md)
 
 [6. Controller, HTTP methods (POST, GET, PUT, DELETE)](Controller-HTTP%20methods/README.md)
 
