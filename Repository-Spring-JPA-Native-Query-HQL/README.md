@@ -37,6 +37,15 @@ Khi khởi tạo Repository, sẽ implement 1 trong 3 interface sau:
 * **PagingAndSortingRepository**: thừa kế từ CrudRepository và thêm findAll method cho phép chúng ta sắp xếp và truy xuất kết quả được phân trang.
 * **JpaRepository** bổ sung thêm một số method dành riêng cho JPA như flush, findAll.
 
+**Các tính năng của JPA**
+* Là một repository mạnh mẽ và object-mapping abstraction tùy chỉnh 
+* Hỗ trợ cho cross-store persistence. Tức là một entity có thể được lưu trữ một phần trong MySQL và Neo4j (Hệ thống quản lý cơ sở dữ liệu đồ thị).
+* Tự động tạo các truy vấn từ ngay chính tên các phương thức truy vấn.
+* Các lớp dựa vào tên miền cung cấp các thuộc tính cơ bản.
+* Hỗ trợ kiểm tra quản lý minh bạch.
+* Khả năng tích hợp mã repository tùy chỉnh.
+* Dễ dàng tích hợp với Spring Framework với namespace tùy chỉnh.
+
 # 3. Native Query
 Native Query là SQL, một ngôn ngữ truy vấn dữ liệu dựa trên các bảng, các cột.
 

@@ -4,7 +4,7 @@
 * Không lặp lại nội dung đối tượng thực.
 * Cho phép thiết lập các trạng thái riêng trợ giúp cho việc thực hiện unit test.
 
-**Các trường hợp sử dụng**
+**Ứng dụng**
 * Đối tượng thật có những hành vi không đoán trước được.
 * Đối tượng thật khó cài đặt.
 * Đối tượng thật chậm.
@@ -20,19 +20,31 @@
 
 * Một unit bao gồm: function, procedure, class, method
 
-**Các trường hợp sử dụng**
+**Các trạng thái cơ bản**
+* Fail (trạng thái lỗi)
+* Ignore (tạm ngừng thực hiện)
+* Pass (trạng thái làm việc)
+
+**Ứng dụng**
 * Tạo môi trường để kiểm tra bất kỳ đoạn code nào.
 * Phát hiện thuật toán thực thi không hiệu quả
 * Phát hiện vấn đề thiết kế, xử lý hệ thống..
 * Phát hiện các lỗi nghiêm trọng có thể xảy ra trong những tình huống hẹp
 
-# 3. JUnit
-**Unit** là một framework đơn giản dùng cho việc tạo unit test tự động, và chạy cấc test có thể lặp đi lặp lại.
+```
+@Test
+public void testSum(){
+    Assert.assertEquals(3, MathUtil.sum(1,2));
+}
+```
 
-Junit là một chuẩn trên thực tế cho unit test trong Java.
+# 3. Intergration test
+**Kiểm thử tích hợp (Integration testing)** là một giai đoạn trong kiểm thử phần mềm. Mỗi module phần mềm riêng biệt được kết hợp lại và kiểm thử theo nhóm.
 
-**Đặc điểm**
-* Xác nhận(assert) việc kiểm tra kết quả được mong đợi.
-* Các Test Suite cho phép chúng ta dễ dàng tổ chức và chạy các test.
+**Cần thực hiện intergration test**
 
-
+* Một Module nói chung được thiết kế bởi một lập trình viên có hiểu biết và logic lập trình có thể khác với các lập trình viên khác. Kiểm thử tích hợp là cần thiết để đảm bảo tính hợp nhất của phần mềm.
+* Tại thời điểm phát triển module vẫn có thể có thay đổi trong yều cầu của khách hàng, những thay đổi này có thể không được kiểm tra ở giai đoạn unit test trước đó.
+* Giao diện và cơ sở dữ liệu của các module có thể chưa hoàn chỉnh khi được ghép lại.
+* Khi tích hợp hệ thống các module có thể không tương thích với cấu hình chung của hệ thống.
+* Thiếu các xử lý ngoại lệ có thể xảy ra.
